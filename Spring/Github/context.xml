@@ -1,0 +1,66 @@
+<Context>
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	<Resources cachingAllowed="false" cacheMaxSize="1024000" />
+
+	<Resource auth="Container" type="javax.sql.DataSource"
+		factory="com.pennanttech.pennapps.core.factory.DataSourceFactory"
+		maxTotal="100" minIdle="30" maxIdle="30" name="jdbc/PFFSEC"
+		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://192.168.120.26:5432/plf_training_test?currentSchema=plf,public,pg_catalog"
+                appcode="PFF"
+		username="postgres" password="Pennant_123"  />
+
+	<Resource auth="Container" type="javax.sql.DataSource"
+		factory="com.pennanttech.pennapps.core.factory.DataSourceFactory"
+		maxTotal="100" minIdle="30" maxIdle="30" name="jdbc/PFF"
+		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://192.168.120.26:5432/plf_training_test?currentSchema=plf,public,pg_catalog"
+                appcode="PFF"
+		username="postgres" password="Pennant_123"  />
+
+	<Resource auth="Container" type="javax.sql.DataSource"
+		factory="com.pennanttech.pennapps.core.factory.DataSourceFactory"
+		maxTotal="100" minIdle="30" maxIdle="30" name="jdbc/PFFAUDIT"
+		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://192.168.120.26:5432/plf_training_test?currentSchema=plfaudit,plf,public,pg_catalog"
+                appcode="PFF"
+		username="postgres" password="Pennant_123"  />
+
+	<Resource auth="Container" type="javax.sql.DataSource"
+		factory="com.pennanttech.pennapps.core.factory.DataSourceFactory"
+		maxTotal="100" minIdle="30" maxIdle="30" name="jdbc/PFFEQUATION"
+                appcode="PFF"
+		driverClassName="" url="" username="" password="" />
+
+	<Resource auth="Container" type="javax.sql.DataSource"
+		factory="com.pennanttech.pennapps.core.factory.DataSourceFactory"
+		maxTotal="100" minIdle="30" maxIdle="30" name="jdbc/PFFEXT"
+                appcode="PFF"
+		driverClassName="" url="" username="" password="" />
+
+	<Resource auth="Container" type="javax.sql.DataSource"
+		factory="com.pennanttech.pennapps.core.factory.DataSourceFactory"
+		maxTotal="10" minIdle="0" maxIdle="8" name="jdbc/PFF-REPORTS-AUDIT"
+		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://192.168.120.26:5432/plf_training_testcurrentSchema=plf,public,pg_catalog"
+                appcode="PFF"
+		username="postgres" password="Pennant_123"  />
+
+<Resource auth="Container" type="javax.sql.DataSource"
+		factory="com.pennanttech.pennapps.core.factory.DataSourceFactory"
+		maxTotal="10" minIdle="0" maxIdle="8" name="jdbc/PFF-REPORTS"
+		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://192.168.120.26:5432/plf_training_test?currentSchema=plf,public,pg_catalog"
+                appcode="PFF"
+		username="postgres" password="Pennant_123"  />
+
+
+<Resource auth="Container" type="javax.sql.DataSource"
+		factory="com.pennanttech.pennapps.core.factory.DataSourceFactory"
+		maxTotal="10" minIdle="0" maxIdle="8" name="jdbc/PFFCORE"
+		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://192.168.120.26:5432/plf_training_test?currentSchema=plf,public,pg_catalog"
+                appcode="PFF"
+		username="postgres" password="Pennant_123"  />
+
+
+<Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver"
+		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" maxIdle="8"
+		maxTotal="100" minIdle="0" name="jdbc/PDP" type="javax.sql.DataSource"
+		url="jdbc:oracle:thin:@192.168.120.43:1521:orcl" username="PDP_VAPT_QC"
+		password="Vpt_pdp_qc_321"/>	
+</Context>   
